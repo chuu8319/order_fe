@@ -64,10 +64,15 @@ export const postByCart = (menuDtoList, total, restaurantId, token) => {
 };
 
 //레스토랑 주문 조회
-export const getMyOrder = (token) => api.get(`/order` , {
+export const getOrderOwner = (token) => api.get(`/order/owner` , {
   headers: {
       Authorization: `Bearer ${token}`,
     }
 }) 
 
-
+//주문 목록 조회
+export const getOrderCustomer = (token) => api.get(`/order/customer` , {
+  headers: {
+      Authorization: `Bearer ${token}`,
+    }
+}) 
